@@ -19,6 +19,11 @@ namespace Calculadora
             Console.WriteLine("2 - Subtração");
             Console.WriteLine("3 - Divisão");
             Console.WriteLine("4 - Multiplicação");
+            Console.WriteLine("5 - Sair");
+
+            Console.WriteLine("------------------");
+            Console.WriteLine("Selecione uma opção: ");
+            short res = short.Parse(Console.ReadLine());
 
             Console.WriteLine("------------------");
             Console.WriteLine("Selecione uma opção: ");
@@ -30,6 +35,7 @@ namespace Calculadora
                 case 2: Subtração(); break;
                 case 3: Divisao(); break;
                 case 4: Multiplicação(); break;
+                case 5: System.Environment.Exit(0); break;
                 default: Menu(); break;
             }
         }
@@ -48,10 +54,8 @@ namespace Calculadora
             Console.WriteLine("");
 
             float resultado = v1 + v2;
-            // Console.WriteLine("O resultado da soma é " + resultado);
+           
             Console.WriteLine($"O resultado da soma é {resultado}");
-            // Console.WriteLine($"O resultado da soma é {v1 * v2}");
-            // Console.WriteLine("O resultado da soma é " + (v1 + v2));
             Console.ReadKey();
             Menu();
         }
